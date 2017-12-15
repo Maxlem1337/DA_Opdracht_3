@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.ucll</groupId>
-	<artifactId>opdracht2_destination_service</artifactId>
+	<artifactId>da_opdracht_3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>opdracht2_destination_service</name>
+	<name>da_opdracht_3</name>
 	<url>http://maven.apache.org</url>
 
 	<parent>
