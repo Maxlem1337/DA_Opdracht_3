@@ -1,8 +1,7 @@
 FROM openjdk:8-jdk-alpine
-
-ENTRYPOINT ["/usr/bin/java", "-jar", "/usr/share/myservice/myservice.jar"]
-
-# Add Maven dependencies (not shaded into the artifact; Docker-cached)
-# Add the service itself
-ARG JAR_FILE
-ADD target/${JAR_FILE} /usr/share/myservice/myservice.jar
+RUN  apk update && apk upgrade && apk add netcat-openbsd
+RUN mkdir -p /usr/local/opdracht3
+ADD  @project.build.finalName@.jar /usr/local/opdracht3/
+ADD run.sh run.sh
+RUN chmod +x run.sh
+CMD ./run.sh
